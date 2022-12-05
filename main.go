@@ -17,6 +17,12 @@ func main() {
 	elfsCalsTotal := sumCalForElf(elfs)
 	sort.Ints(elfsCalsTotal)
 	fmt.Println(elfsCalsTotal[len(elfsCalsTotal)-1])
+	resTop3 := []int{
+		elfsCalsTotal[len(elfsCalsTotal)-1],
+		elfsCalsTotal[len(elfsCalsTotal)-2],
+		elfsCalsTotal[len(elfsCalsTotal)-3],
+	}
+	fmt.Println(sum(resTop3))
 }
 
 func openFile(fileName string) (*os.File, error) {
